@@ -1,0 +1,32 @@
+#menu{
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.95);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(9.8px);
+-webkit-backdrop-filter: blur(9.8px);
+border: 1px solid rgba(255, 255, 255, 0.89);
+}
+.mm{
+border-radius: 0px !important;
+}
+[data-toggle="dropdown"]:after {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  content: "\f054";
+  transform: rotate(90deg) ;
+  transition: all linear 0.25s;
+  }   
+[data-toggle="dropdown"].collapsed:after {
+  transform: rotate(180deg) ;
+}
+.group1{
+display: block;
+}
+.flexit{
+display: inline-flex;
+}
