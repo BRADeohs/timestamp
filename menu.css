@@ -10,6 +10,9 @@ border: 1px solid rgba(255, 255, 255, 0.89);
 .mm{
 border-radius: 0px !important;
 }
+a.mm{
+color: azure;
+}
 [data-toggle="dropdown"]:after {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;

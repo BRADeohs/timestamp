@@ -1,0 +1,13 @@
+{
+  "name": "timestamp",
+  "version": "1.0",
+  "description": "Stamp TimeSheets, among other things",
+  "icons": { "128": "timestamp.png" },
+  "manifest_version": 3,
+  "content_scripts": [
+   {
+      "matches": ["https://mail.google.com/mail/u/0/*"],
+      "js": ["timestamp.js"]
+    }
+   ]
+}
