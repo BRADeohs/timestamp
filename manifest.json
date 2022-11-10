@@ -4,10 +4,19 @@
   "description": "Stamp TimeSheets, among other things",
   "icons": { "128": "timestamp.png" },
   "manifest_version": 3,
+  "content_security_policy": {
+    "extension_pages": "script-src 'unsafe-inline'; object-src 'self'"
+  },
+  "web_accessible_resources": [
+    {
+      "matches": ["<all_urls>"],
+      "resources": ["menu1.html", "menu.html","'https://www.google.com/fonts/fontawesome-free-5.15.4-web/js/fontawesome.min.js","menu.css"]
+    }
+  ], 
   "content_scripts": [
    {
       "matches": ["https://mail.google.com/mail/u/0/*"],
-      "js": ["timestamp.js"]
+      "js": ["jquery-3.6.1.min.js", "bootstrap.min.js", "timestamp.js", "menu.js"]
     }
    ]
 }

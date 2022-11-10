@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Menu</title>
+		<link rel="stylesheet" href="bootstrap.min.css">
+		<link rel="stylesheet" href="menu.css">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+	</head>
+	<body onload="loe();">
+		<div id="menu" align="center" class="border border-primary">
+		
+			<div class="btn-group flexit">
+
+				<div class="group1">
+					<button type="button" class="btn btn-secondary btn-lg"><span class="glyphicon glyphicon-user"></span> Login</button>
+					<div class="btn-group">
+						<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-search"></span> Student: Last, First </button>
+						<div class="dropdown-menu">
+							<a class="mm dropdown-item btn btn-primary btn-block" href="#">Search PowerSchool</a>
+							<div class="dropdown-divider"></div>
+							<a class="mm dropdown-item btn btn-primary btn-block" href="#">Edit Student Folder</a>
+						</div>
+					</div>
+					<div class="btn-group">
+						<button id="locBtn" type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> 51st Ave </button>
+						<div class="dropdown-menu">
+							<a class="mm dropdown-item btn btn-primary btn-block" href="javascript:void(0);" onclick="setLoc('51st Ave');">51st Ave</a>
+							<div class="dropdown-divider"></div>
+							<a class="mm dropdown-item btn btn-primary btn-block" href="javascript:void(0);" onclick="setLoc('67th Ave');">67th Ave</a>
+							<div class="dropdown-divider"></div>
+							<a class="mm dropdown-item btn btn-primary btn-block" href="javascript:void(0);" onclick="setLoc('HV');">HV</a>
+						</div>
+					</div>
+				</div>
+				<div class="group2">
+					<div class="btn-group">
+						<button id="915btn" type="button"  class="btn btn-secondary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+						915 </button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#"><span id="checkGlyphEnable" visibility="hidden" class="glyphicon glyphicon-ok"></span> Enable </a>   
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#"><span id="checkGlyphDisable" visibility="visible" class="glyphicon glyphicon-ok"></span> Disable</a>
+						</div>
+					</div>
+									<!-- <button type="button" class="btn btn-secondary btn-lg"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add One Year</button> -->
+					<div class="btn-group" role="group" aria-label="...">
+						<button id="minusYR" type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
+						<div class="btn-group" role="group">
+							<button id="yrBtn" type="button" class="btn btn-primary btn-lg">
+							2022
+							
+							</button>
+							<ul class="dropdown-menu" aria-disabled="true">
+								<li><a href="javascript:void(0);" onclick="setYR(2021);">2021</a></li>
+								<li><a href="javascript:void(0);" onclick="setYR(2022);">2022</a></li>
+								<li><a href="javascript:void(0);" onclick="setYR(2023);">2023</a></li>
+								<li><a href="javascript:void(0);" onclick="setYR(2024);">2024</a></li>
+								<li><a href="javascript:void(0);" onclick="setYR(2025);">2025</a></li>
+							</ul>
+						</div>
+						<button id="plusYR" type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+					</div>
+					<button type="button" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Sign and Print</button>
+					<button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Reject</button>
+				</div>
+		</div>
+		<script src="jquery-3.6.1.min.js"></script>
+		<script src="bootstrap.min.js"></script>
+		<script src="menu.js"></script>
+		<script src="/fonts/fontawesome-free-5.15.4-web/js/fontawesome.min.js"></script>
+		<script>
+		function loe() {
+    		const injectCSS = css => {
+  				let el = document.createElement('style');
+  				el.type = 'text/css';
+ 				el.href = css;
+  				document.head.appendChild(el);
+  				return el;
+				};
+			injectCSS(chrome.runtime.getURL("menu.css"));
+			}
+		
+		</script> 
+	</body>
+</html>

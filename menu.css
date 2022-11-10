@@ -20,7 +20,7 @@ color: azure;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  content: "\f054";
+  content: "\f078";
   transform: rotate(90deg) ;
   transition: all linear 0.25s;
   }   
