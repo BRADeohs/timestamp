@@ -5,7 +5,7 @@
   "icons": { "128": "timestamp.png" },
   "manifest_version": 3,
   "content_security_policy": {
-    "extension_pages": "script-src 'unsafe-inline'; object-src 'self'"
+    "extension_pages": "script-src 'self'; object-src 'self'"
   },
   "web_accessible_resources": [
     {
@@ -15,7 +15,9 @@
   ], 
   "content_scripts": [
    {
-      "matches": ["https://mail.google.com/mail/u/0/*"],
+      "exclude_globs":    [  ],  
+      "include_globs":    [ "https://mail.google.com/mail/*view=pt*" ],
+      "matches": ["https://mail.google.com/mail/*"],
       "js": ["jquery-3.6.1.min.js", "bootstrap.min.js", "timestamp.js", "menu.js"]
     }
    ]
